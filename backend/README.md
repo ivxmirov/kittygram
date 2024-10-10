@@ -121,7 +121,6 @@ POSTGRES_USER= \
 POSTGRES_PASSWORD= \
 DB_NAME= 
 
-
 13. В настройках репозитория github создайте секретные переменные необходимые для запуска workflow (см. файл /.git/workflows/main.py),
 а также все переменные из файла .env из пункта выше. \
 TELEGRAM_TO - ваш id аккаунта в телеграмм. \
@@ -132,7 +131,6 @@ SSH_KEY - закрытый ключ. \
 HOST это IP рабочего сервера. \
 DOCKER_USERNAME - логин вашего dockerhub. \
 DOCKER_PASSWORD - пароль вашего dockerhub.
-
 
 14. Сбилдите образа и залейте их на dockerhub, обратите внимание, образ kittygram_gateway собирается на основании папки nginx/.
 Вместо username подставьте свой username на dockerhub.
@@ -151,7 +149,6 @@ docker push username/kittygram_gateway
 
 15. Замените в файле /.git/workflows/main.py логины в переменных с адресами образов на dockerhub-е на свой никнейм.
 
-
 16. Подготовьте удаленный сервер:
  Через редактор Nano откройте файл конфигурации веб-сервера:
 ```
@@ -168,7 +165,6 @@ server {
     }
 }
 ```
-
 
 17. Устновите ssl-сертификаты: 
 [Ссылка на certbot](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal) 
